@@ -1,0 +1,229 @@
+.students-page {
+  margin-left: 250px;
+  margin-top: 80px;
+  padding: 30px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.students-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.students-header h1 {
+  font-size: 30px;
+  color: #2c3e50;
+}
+
+.add-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #43a047;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background: #34495e;
+  color: white;
+}
+
+thead th {
+  padding: 15px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 8px 10px;
+  margin-right: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+}
+
+.edit-btn {
+  background: #2196f3;
+}
+
+.edit-btn:hover {
+  background: #1976d2;
+}
+
+.delete-btn {
+  background: #f44336;
+}
+
+.delete-btn:hover {
+  background: #d32f2f;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  width: 500px;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal h2 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.modal input:focus,
+.modal textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.save-btn,
+.cancel-btn {
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn {
+  background: #27ae60;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #219150;
+}
+
+.cancel-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #c0392b;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+table td:last-child {
+  white-space: nowrap;
+}
+
+@media (max-width: 992px) {
+  .students-page {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .students-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .modal {
+    width: 90%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .students-header h1 {
+    font-size: 24px;
+  }
+
+  .add-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    margin-bottom: 5px;
+  }
+
+  .modal {
+    padding: 20px;
+  }
+
+  .modal input,
+  .modal textarea {
+    font-size: 14px;
+  }
+
+  .save-btn,
+  .cancel-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
